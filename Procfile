@@ -1,1 +1,1 @@
-bot: python bot.app/tg_bot.py
+bot: python bot_app/tg_bot.py
