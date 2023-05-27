@@ -1,0 +1,4 @@
+venvbot/
+.env
+__pycache__
+
