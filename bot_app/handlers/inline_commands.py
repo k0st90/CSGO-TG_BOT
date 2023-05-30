@@ -82,7 +82,7 @@ async def get_weapon(callback: types.CallbackQuery):
 async def last_20_games(message: types.Message):
     last20 = requests.get(f'https://csgo-fastapi.herokuapp.com/last_20_games_stats/{message.from_user.id}')
     if last20.status_code == 404:
-        await message.answer_photo('Ви ще не зареєструвалися, щоб зареєструватися, використайте команду /start')
+        await message.answer('Ви ще не зареєструвалися, щоб зареєструватися, використайте команду /start')
     else:
         await message.answer_animation('https://media.tenor.com/EdzTFfUhLrwAAAAC/clock-ticktock.gif' ,caption='Останні 20 матчів:', reply_markup=map_keyboard(last20.json()))
 
